@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  border: 0;
+  outline: 0;
+  /* text-transform: capitalize; */
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+:root {
+  --yellow-clr: #ffc63d;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+*::selection {
+  background: var(--yellow-clr);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+body {
+  background: #282828;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+  border: 0.2rem solid var(--yellow-clr);
+  color: var(--yellow-clr);
+  background: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: var(--yellow-clr);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.btn:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+/* .Banner section start */
+
+.banner {
+  width: 100%;
+  min-height: 50vh;
+  background: url(img/about/about-bg.jpg) no-repeat center/cover;
+  border-image: fill 0 linear-gradient(#0008, #000);
+}
+
+.banner .content {
+  margin-top: 5%;
+}
+
+.banner .content h3 {
+  font-size: calc(30px + (65 - 30) * ((100vw - 300px) / (1600 - 300)));
+  color: var(--yellow-clr);
+}
+
+.banner .content p {
+  max-width: 50%;
+  color: #fff;
+  padding: 1rem 0rem;
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+/* .Banner section end */
+
+/* adventages section start  */
+.advantages {
+  min-height: 60vh;
+}
+/* adventages section end  */
+
+/* About start  */
+.about {
+  min-height: 70vh;
+  background: var(--yellow-clr);
+}
+.about .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.about .box-container .img {
+  flex: 1 1 40rem;
+  padding: 2rem;
+}
+
+.about .box-container .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.about .box-container .content {
+  flex: 1 1 40rem;
+  padding: 2rem;
+}
+
+.about .box-container .content h3 {
+  font-size: calc(30px + (65 - 30) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.about .box-container .content p {
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+  padding: 1rem 0rem;
+}
+/* About end  */
+
+/* Advantages  section start*/
+
+.advantages .content {
+  color: #fff;
+  text-align: center;
+}
+
+.advantages .content h3 {
+  font-size: calc(30px + (65 - 30) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.advantages .content p {
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+  padding: 1rem 0;
+  padding: 1rem 0;
+  margin-bottom: 5rem;
+}
+
+.advantages .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.advantages .box-container .box {
+  flex: 1 1 25rem;
+  padding: 2rem;
+  background: #fff;
+  margin: 1rem;
+  text-align: center;
+  border: 0.5rem solid var(--yellow-clr);
+  box-shadow: var(--box-shadow);
+}
+
+.advantages .box-container .box h4 {
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+  margin: 1rem;
+}
+
+.advantages .box-container .box p {
+  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+/* Advantages  section start*/
+
+/* People section start */
+
+.people {
+  min-height: 60vh;
+  background: url(img/about/people.jpg) no-repeat center/cover;
+  border-image: fill linear-gradient(#0005, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.people h3 {
+  font-size: calc(30px + (65 - 30) * ((100vw - 300px) / (1600 - 300)));
+  color: #fff;
+}
+
+.people h3 span {
+  color: var(--yellow-clr);
+}
+
+/* People section end */
+
+/* Footer section start */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.footer .copyright {
+  margin-top: 3rem;
+  color: #fff;
+  font-size: calc(12px + (15- 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.footer .copyright span {
+  color: var(--yellow-clr);
+}
+/* Footer section start */
+
+/* Media queries */
+
+@media (max-width: 937px) {
+  .footer .menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
