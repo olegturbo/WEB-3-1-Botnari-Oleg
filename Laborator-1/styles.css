@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(65, 53, 53);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlu {
+    color: aqua;
+}
+
+.descriere {
+    color: beige;
+    display: flex;
+    align-items: center;
+}
+
+.buton {
+    border: 2px;
+    color: red;
+}
+
+#text {
+    font-size: large;
+    color: blanchedalmond;
+}
