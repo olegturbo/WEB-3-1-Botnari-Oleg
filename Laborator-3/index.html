@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Piatra, Hârtia, Foarfeca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="joc">
+        <header>
+            <h1>Piatra, Hârtia, Foarfeca</h1>
+            <p class="nota">Exercițiile 1 și 2 se văd în consola browserului (F12). Primul care ajunge la 5 victorii câștigă jocul.</p>
+        </header>
+
+        <section class="butoane" aria-label="Alege">
+            <button type="button" id="btn-piatra" data-alegere="piatra">✊ Piatra</button>
+            <button type="button" id="btn-hartia" data-alegere="hartia">✋ Hârtia</button>
+            <button type="button" id="btn-foarfeca" data-alegere="foarfeca">✌️ Foarfeca</button>
+        </section>
+
+        <section class="alegeri">
+            <div class="alegere">
+                <span class="eticheta">Alegerea ta</span>
+                <strong id="alegere-jucator">–</strong>
+            </div>
+            <div class="alegere">
+                <span class="eticheta">Calculatorul</span>
+                <strong id="alegere-calculator">–</strong>
+            </div>
+        </section>
+
+        <p id="rezultat" class="rezultat" aria-live="polite">Apasă un buton ca să începi.</p>
+
+        <section class="scor">
+            <div class="cifra">
+                <span id="scor-jucator">0</span>
+                <small>Tu</small>
+            </div>
+            <div class="cifra">
+                <span id="scor-egalitati">0</span>
+                <small>Egalități</small>
+            </div>
+            <div class="cifra">
+                <span id="scor-calculator">0</span>
+                <small>Calculator</small>
+            </div>
+        </section>
+
+        <p id="runde" class="runde">Runde jucate: 0</p>
+        <p id="conducere" class="conducere"></p>
+
+        <button type="button" id="btn-reset" class="reset">Joc nou</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

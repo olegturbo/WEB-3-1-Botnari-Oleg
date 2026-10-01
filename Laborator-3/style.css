@@ -1,0 +1,174 @@
+:root {
+    --fond: #1b1f3b;
+    --panou: #262b52;
+    --linie: #3a4080;
+    --text: #f2f3fb;
+    --discret: #a9afd6;
+    --accent: #ffcf4a;
+    --win: #62e0a1;
+    --lose: #ff7b8a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px 16px;
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--fond);
+}
+
+.joc {
+    width: 100%;
+    max-width: 560px;
+    padding: 32px 28px;
+    text-align: center;
+    background: var(--panou);
+    border: 2px solid var(--linie);
+    border-radius: 18px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    color: var(--accent);
+}
+
+.nota {
+    margin: 0 0 24px;
+    font-size: 0.85rem;
+    color: var(--discret);
+}
+
+.butoane {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.butoane button {
+    padding: 16px 6px;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    background: var(--fond);
+    border: 2px solid var(--linie);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.butoane button:hover:not(:disabled),
+.butoane button:focus-visible {
+    color: var(--fond);
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.butoane button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.alegeri {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.alegere {
+    padding: 14px 8px;
+    background: var(--fond);
+    border-radius: 12px;
+}
+
+.eticheta {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.8rem;
+    color: var(--discret);
+}
+
+.alegere strong {
+    font-size: 1.15rem;
+}
+
+.rezultat {
+    margin: 0 0 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.scor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.cifra span {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.cifra:first-child span {
+    color: var(--win);
+}
+
+.cifra:last-child span {
+    color: var(--lose);
+}
+
+.cifra small {
+    color: var(--discret);
+}
+
+.runde,
+.conducere {
+    margin: 0 0 6px;
+    color: var(--discret);
+}
+
+.conducere {
+    min-height: 1.6em;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.reset {
+    margin-top: 12px;
+    padding: 10px 26px;
+    font: inherit;
+    font-weight: 700;
+    color: var(--text);
+    background: transparent;
+    border: 2px solid var(--discret);
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.reset:hover,
+.reset:focus-visible {
+    color: var(--fond);
+    background: var(--text);
+}
+
+@media (max-width: 480px) {
+    .joc {
+        padding: 24px 14px;
+    }
+
+    .butoane {
+        grid-template-columns: 1fr;
+    }
+}
